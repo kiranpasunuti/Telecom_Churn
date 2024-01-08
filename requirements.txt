@@ -3,3 +3,4 @@ numpy==1.24.3
 pandas==2.0.3
 pickleshare==0.7.5
 streamlit==1.29.0
+joblib==1.2.0                    
