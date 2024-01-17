@@ -38,9 +38,11 @@ st.title("Telecom Churn Prediction")
 # Collect user inputs on the first page
 for col, input_info in input_columns.items():
     if input_info['type'] == 'number_input':
-        user_input[col] = st.number_input(f"Enter {col}", value=0, step=1)  # Set step to 1 for whole numbers
+        user_input[col] = st.number_input(f"{input_info['text']}", value=0, step=1)
     elif input_info['type'] == 'radio':
-        user_input[col] = st.radio(f"Select {col}", options=input_info['options'], format_func=lambda x: str(x), key=col)
+        # Map 'NO' to 0 and 'YES' to 1
+        user_input[col] = 1 if st.radio(f"{input_info['text']}", options=input_info['options'], key=col) == 'YES' else 0
+
 
 # Predict button
 if st.button("Predict"):
