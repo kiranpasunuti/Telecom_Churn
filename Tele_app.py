@@ -13,20 +13,36 @@ if 'show_result' not in st.session_state:
     st.session_state.show_result = False
 
 # Define the input fields along with their corresponding input types and conditions
+#input_columns = {
+ #   'voice.plan': {'type': 'radio', 'options': [0, 1]},
+  #  'voice.messages': {'type': 'number_input'},
+   # 'intl.plan': {'type': 'radio', 'options': [0, 1]},
+    #'intl.mins': {'type': 'number_input'},
+#    'intl.calls': {'type': 'number_input'},
+ #   'intl.charge': {'type': 'number_input'},
+  #  'day.mins': {'type': 'number_input'},
+   # 'day.charge': {'type': 'number_input'},
+#    'eve.mins': {'type': 'number_input'},
+ #   'eve.charge': {'type': 'number_input'},
+#    'night.mins': {'type': 'number_input'},
+#    'night.charge': {'type': 'number_input'},
+#    'customer.calls': {'type': 'number_input'},
+#}
+
 input_columns = {
-    'voice.plan': {'type': 'radio', 'options': [0, 1]},
-    'voice.messages': {'type': 'number_input'},
-    'intl.plan': {'type': 'radio', 'options': [0, 1]},
-    'intl.mins': {'type': 'number_input'},
-    'intl.calls': {'type': 'number_input'},
-    'intl.charge': {'type': 'number_input'},
-    'day.mins': {'type': 'number_input'},
-    'day.charge': {'type': 'number_input'},
-    'eve.mins': {'type': 'number_input'},
-    'eve.charge': {'type': 'number_input'},
-    'night.mins': {'type': 'number_input'},
-    'night.charge': {'type': 'number_input'},
-    'customer.calls': {'type': 'number_input'},
+    'voice.plan': {'type': 'radio', 'text': 'Voice Plan', 'options': [0, 1]},
+    'voice.messages': {'type': 'number_input', 'text': 'Voice Messages'},
+    'intl.plan': {'type': 'radio', 'text': 'International Plan', 'options': [0, 1]},
+    'intl.mins': {'type': 'number_input', 'text': 'International Minutes'},
+    'intl.calls': {'type': 'number_input', 'text': 'International Calls'},
+    'intl.charge': {'type': 'number_input', 'text': 'International Charge'},
+    'day.mins': {'type': 'number_input', 'text': 'Day Minutes'},
+    'day.charge': {'type': 'number_input', 'text': 'Day Charge'},
+    'eve.mins': {'type': 'number_input', 'text': 'Evening Minutes'},
+    'eve.charge': {'type': 'number_input', 'text': 'Evening Charge'},
+    'night.mins': {'type': 'number_input', 'text': 'Night Minutes'},
+    'night.charge': {'type': 'number_input', 'text': 'Night Charge'},
+    'customer.calls': {'type': 'number_input', 'text': 'Customer Calls'},
 }
 
 # Create a dictionary to store user input
